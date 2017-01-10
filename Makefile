@@ -1,8 +1,8 @@
 CC = gcc
-CFLAGS += $(shell pkg-config libftdi1 --cflags)
+CFLAGS += $(shell pkg-config libftdi --cflags)
 CFLAGS += -g -Wall
 #CFLAGS += -O2 -s
-LDFLAGS = $(shell pkg-config libftdi1 --libs)
+LDFLAGS = $(shell pkg-config libftdi --libs)
 INCLUDES = 
 
 TARGET = nrf24le1_flasher

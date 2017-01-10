@@ -64,7 +64,7 @@ we have serial already.
 Dependencies
 ------------
 
-The only dependency is libftdi1 and libusb-1.0.
+The only dependency is libftdi.
 
 
 Usage
@@ -125,11 +125,11 @@ It will list devices like:
     |__ Port 2: Dev 48, If 0, Class=Vendor Specific Class, Driver=ftdi_sio, 12M
 ```
 
-Now we know the bus (4) and the port (2) of our FTDI device, so we can pass it
+Now we know the bus (4) and the device (48) of our FTDI device, so we can pass it
 to nrf24le1_flasher:
 
 ```
-# nrf24le1_flasher -d 4-2 --read-ip ip_bkp.img
+# nrf24le1_flasher -d 4-48 --read-ip ip_bkp.img
 ```
 
 Another programmers/flashers
